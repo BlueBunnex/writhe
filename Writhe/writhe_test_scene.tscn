@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0p8bdqf3u1j1"]
+
+[ext_resource type="Script" path="res://PlayerMove.gd" id="1_snhu4"]
+[ext_resource type="Texture2D" uid="uid://bcyjh2yholgp2" path="res://STONE.png" id="2_033i5"]
+[ext_resource type="ArrayMesh" uid="uid://c1j2xyk1guw23" path="res://sawed-off-mesh.obj" id="3_f1c4j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjp0k"]
+shading_mode = 2
+albedo_texture = ExtResource("2_033i5")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hf5a5"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sun" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.510237, -0.666685, 0.543313, 0.773988, -0.0805242, 0.628059, -0.374968, 0.740977, 0.557093, 0, 5, 0)
+
+[node name="Ground" type="CSGBox3D" parent="."]
+material_override = SubResource("StandardMaterial3D_bjp0k")
+use_collision = true
+size = Vector3(10, 1, 10)
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_snhu4")
+
+[node name="Camera" type="Camera3D" parent="Player"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[node name="Sawed-off-mesh" type="MeshInstance3D" parent="Player/Camera"]
+transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0.2, -0.3, -0.5)
+mesh = ExtResource("3_f1c4j")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("CapsuleShape3D_hf5a5")
