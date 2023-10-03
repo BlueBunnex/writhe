@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://deu8fscdq5ihg"]
+
+[ext_resource type="PackedScene" uid="uid://d0p8bdqf3u1j1" path="res://Scenes/test/writhe_test_scene.tscn" id="1_51of3"]
+[ext_resource type="PackedScene" uid="uid://bn5po62h3ds4p" path="res://Scenes/UI/UI.tscn" id="2_qyinw"]
+[ext_resource type="Script" path="res://Scenes/UI/GameManager.gd" id="3_8mssn"]
+
+[node name="GameManager" type="Node"]
+process_mode = 3
+script = ExtResource("3_8mssn")
+
+[node name="LevelTest" parent="." instance=ExtResource("1_51of3")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI_Pause" parent="CanvasLayer" instance=ExtResource("2_qyinw")]

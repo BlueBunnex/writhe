@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1696296136
+icon.svg::CompressedTexture2D::489328746231603767::1696292252::1696292300::1::::<><>::
+::res://Assets/::1696296025
+sawed-off-mesh.obj::Mesh::6618012411024688330::1696292252::1696296025::1::::<><>::
+STONE.png::CompressedTexture2D::2576903846101789257::1696292252::1696296025::1::::<><>::
+::res://Scenes/::1696296031
+Game.tscn::PackedScene::7483318519112233700::1696296031::0::1::::<><>::uid://d0p8bdqf3u1j1::::res://Scenes/test/writhe_test_scene.tscn<>res://Scenes/GameManager.gd<>uid://bn5po62h3ds4p::::res://Scenes/UI/UI.tscn
+GameManager.gd::GDScript::-1::1696295631::0::1::::GameManager<>Node<>::
+::res://Scenes/test/::1696296025
+writhe_test_scene.tscn::PackedScene::8946954437448539700::1696296025::0::1::::<><>::res://Scripts/PlayerMove.gd<>uid://bcyjh2yholgp2
+::res://Scenes/UI/::1696296031
+UI.tscn::PackedScene::3361744409904659625::1696296031::0::1::::<><>::res://Scenes/UI/UI_Pause.gd
+UI_Pause.gd::GDScript::-1::1696295810::0::1::::<>Control<>::
+::res://Scripts/::1696296003
+PlayerMove.gd::GDScript::-1::1696292252::0::1::::<>CharacterBody3D<>::

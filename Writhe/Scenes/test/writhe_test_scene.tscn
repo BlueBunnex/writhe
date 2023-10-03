@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0p8bdqf3u1j1"]
 
-[ext_resource type="Script" path="res://PlayerMove.gd" id="1_snhu4"]
-[ext_resource type="Texture2D" uid="uid://bcyjh2yholgp2" path="res://STONE.png" id="2_033i5"]
-[ext_resource type="ArrayMesh" uid="uid://c1j2xyk1guw23" path="res://sawed-off-mesh.obj" id="3_f1c4j"]
+[ext_resource type="Script" path="res://Scripts/PlayerMove.gd" id="1_snhu4"]
+[ext_resource type="Texture2D" uid="uid://bcyjh2yholgp2" path="res://Assets/STONE.png" id="2_033i5"]
+[ext_resource type="ArrayMesh" uid="uid://c1j2xyk1guw23" path="res://Assets/sawed-off-mesh.obj" id="3_f1c4j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bjp0k"]
 shading_mode = 2
@@ -11,6 +11,7 @@ albedo_texture = ExtResource("2_033i5")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hf5a5"]
 
 [node name="Node3D" type="Node3D"]
+process_mode = 1
 
 [node name="Sun" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.510237, -0.666685, 0.543313, 0.773988, -0.0805242, 0.628059, -0.374968, 0.740977, 0.557093, 0, 5, 0)
